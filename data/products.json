@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Royal Sushi Houese",
+    "time": "30-40 min",
+    "price": "32",
+    "priceType": "$",
+    "img": null,
+    "categories": [
+      {
+        "id": "1",
+        "name": "Sushi"
+      },
+      {
+        "id": "1",
+        "name": "Pizza"
+      }
+    ]
+  },
+  {
+    "title": "Royal Sushi Houese",
+    "time": "30-40 min",
+    "price": "32",
+    "img": null,
+    "priceType": "$",
+    "categories": [
+      {
+        "id": "1",
+        "name": "Sushi"
+      }
+    ]
+  },
+  {
+    "title": "Royal Sushi Houese",
+    "time": "30-40 min",
+    "price": "32",
+    "priceType": "$",
+    "img": null,
+    "categories": [
+      {
+        "id": "1",
+        "name": "Sushi"
+      },
+      {
+        "id": "1",
+        "name": "Pizza"
+      }
+    ]
+  },
+  {
+    "title": "Royal Sushi Houese",
+    "time": "30-40 min",
+    "price": "32",
+    "img": null,
+    "priceType": "$",
+    "categories": [
+      {
+        "id": "1",
+        "name": "Sushi"
+      }
+    ]
+  },
+  {
+    "title": "Royal Sushi Houese",
+    "time": "30-40 min",
+    "price": "32",
+    "priceType": "$",
+    "img": null,
+    "categories": [
+      {
+        "id": "1",
+        "name": "Sushi"
+      },
+      {
+        "id": "1",
+        "name": "Pizza"
+      }
+    ]
+  },
+  {
+    "title": "Royal Sushi Houese",
+    "time": "30-40 min",
+    "price": "32",
+    "img": null,
+    "priceType": "$",
+    "categories": [
+      {
+        "id": "1",
+        "name": "Sushi"
+      }
+    ]
+  }
+]
