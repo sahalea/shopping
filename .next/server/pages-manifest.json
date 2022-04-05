@@ -1,0 +1,15 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/category": "pages/api/category.js",
+  "/api/clientRequest": "pages/api/clientRequest.js",
+  "/api/databaseManager": "pages/api/databaseManager.js",
+  "/api/login": "pages/api/login.js",
+  "/home/components/ProductCard": "pages/home/components/ProductCard.js",
+  "/home": "pages/home.js",
+  "/": "pages/index.js",
+  "/login/components/LoginBanner": "pages/login/components/LoginBanner.js",
+  "/login/components/LoginForm": "pages/login/components/LoginForm.js",
+  "/login": "pages/login.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
+}
