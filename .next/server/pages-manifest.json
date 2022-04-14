@@ -4,7 +4,7 @@
   "/api/clientRequest": "pages/api/clientRequest.js",
   "/api/databaseManager": "pages/api/databaseManager.js",
   "/api/login": "pages/api/login.js",
-  "/home": "pages/home.js",
+  "/home": "pages/home.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",
   "/_error": "pages/_error.js",

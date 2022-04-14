@@ -8,19 +8,20 @@ import Products from '../../data/products.json'
 import ProductCard from '../../components/ProductCard'
 import { post } from '../api/clientRequest'
 
-interface StatelessPage<P = {}> extends React.SFC<P> {
-  getInitialProps?: (ctx: any) => Promise<P>
-}
-
-const Home: StatelessPage<any> = ({ data }) => {
+const Home: NextPage<any> = ({ data }) => {
   const [categories, setCategories] = useState([])
   const basePath = '/assets/images/categories/'
   const [selectedCategories, setSelectedCategories] = useState<any>([])
   const [products, setProducts] = useState<any>(Products)
 
   useEffect(() => {
-    setSelectedCategories(data)
-  }, [data])
+    getCategory()
+  }, [])
+
+  const getCategory = async () => {
+    const { data } = await post('category', null)
+    if (data.length) setCategories(data)
+  }
 
   const handleCategoryClick = (category: any) => {
     const newSelectedCategories = selectedCategories.includes(category)
@@ -79,12 +80,4 @@ const Home: StatelessPage<any> = ({ data }) => {
   )
 }
 
-Home.getInitialProps = async () => {
-  const { data } = await post('category', null)
-  return {
-    props: {
-      data,
-    },
-  }
-}
 export default Home
