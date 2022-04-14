@@ -17,7 +17,7 @@ const Navbar: NextPage = () => {
           <SearchOutlined className="absolute right-[10px]" />
         </div>
         <div className="hidden flex-1 items-center justify-end md:flex">
-          <div className="mr-6">
+          <div className="mr-6 ">
             <a
               href=""
               className="font-semibold text-gray-800 hover:text-primary"
