@@ -2,10 +2,10 @@
 (() => {
 var exports = {};
 exports.id = 229;
-exports.ids = [229,87,471];
+exports.ids = [229];
 exports.modules = {
 
-/***/ 53:
+/***/ 422:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -140,8 +140,101 @@ const Layout = (props)=>{
 
 ;// CONCATENATED MODULE: ./data/products.json
 const products_namespaceObject = JSON.parse('[{"title":"Royal Sushi Houese","time":"30-40 min","price":"32","priceType":"$","img":null,"categories":[{"id":"1","name":"Sushi"},{"id":"1","name":"Pizza"}]},{"title":"Royal Sushi Houese","time":"30-40 min","price":"32","img":null,"priceType":"$","categories":[{"id":"1","name":"Sushi"}]},{"title":"Royal Sushi Houese","time":"30-40 min","price":"32","priceType":"$","img":null,"categories":[{"id":"1","name":"Sushi"},{"id":"1","name":"Pizza"}]},{"title":"Royal Sushi Houese","time":"30-40 min","price":"32","img":null,"priceType":"$","categories":[{"id":"1","name":"Sushi"}]},{"title":"Royal Sushi Houese","time":"30-40 min","price":"32","priceType":"$","img":null,"categories":[{"id":"1","name":"Sushi"},{"id":"1","name":"Pizza"}]},{"title":"Royal Sushi Houese","time":"30-40 min","price":"32","img":null,"priceType":"$","categories":[{"id":"1","name":"Sushi"}]}]');
-// EXTERNAL MODULE: ./pages/home/components/ProductCard.tsx + 2 modules
-var ProductCard = __webpack_require__(868);
+;// CONCATENATED MODULE: ./assets/images/img mask.png
+/* harmony default export */ const img_mask = ({"src":"/_next/static/media/img mask.1d931bda.png","height":160,"width":350,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAj0lEQVR4nAGEAHv/AVpcO/oOFAoF/egOAFg3IQAJDQwA4vkMALbAywAmLwj7AXZ0VP/l5/EAKw0VABcYFgALBf4AEg8NALDG3QDe7u0AAU1LQ/8YDQ8AVisNAPgABgD1AgwA0+byAPMKGADh1dMAARwME/8yPzcAHQf8ADgaBQAhIyIA2er4AKfd+wAB6N4ACnMr4EcqlwkAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./assets/images/categories/pizza.png
+/* harmony default export */ const pizza = ({"src":"/_next/static/media/pizza.5c68ae93.png","height":24,"width":24,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA7ElEQVR42mPYn8vAxAAE/9+3891eFZB5dorj9gMNhs+2l2qEMMDArWV+EcfaLZ7sKVb7v9pX+P96T4H/O+Ik4hhA4OJ0p8mbM2T/7y8x+P9iodefM3bSP8/aC/y/W6MeywACW3Pk55/o8Pt/Ocfq//UCvT8vp9n/uVOp/P9StVoKAwx8OdERcbPQ7f+NSvv/D/rcfhzTY/h/NkU9jQEE3qxPZQHR7w/X2r47UPHlyfyY/+eDhP8fS1ZNYICB5+vzWUH06+OVilf7gq+fLdb9f7JWM5gBGdyZkQhWlMTAIH7USvjA4TRVWwYGBgYA4XNmES2izE0AAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./components/ProductCard.tsx
+
+
+
+
+
+const ProductCard = (props)=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: "relative mb-3 h-[276px] w-full cursor-pointer rounded-[17px] border md:mr-3 md:w-[32%]",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "absolute top-0 right-0 z-[1001] rounded-tr-[17px] rounded-bl-[17px] bg-primary p-2 px-4 text-white",
+                children: "FEATURED"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "product-banner",
+                children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+                    className: "w-full",
+                    src: img_mask,
+                    height: 160
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "px-6",
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: "flex items-center",
+                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "flex-1",
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("h1", {
+                                    className: "mb-0 text-lg font-semibold",
+                                    children: props.title
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    className: "mb-5 flex items-center",
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                            className: "flex items-center text-gray-500",
+                                            children: [
+                                                /*#__PURE__*/ jsx_runtime_.jsx(icons_.ClockCircleOutlined, {}),
+                                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                                    className: "mb-0 ml-1",
+                                                    children: props.time
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                            className: "mx-2 mb-0 font-bold",
+                                            children: "."
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                                            className: "mb-0 text-gray-500",
+                                            children: [
+                                                props.priceType,
+                                                " ",
+                                                props.price,
+                                                " min sum"
+                                            ]
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: "flex flex-wrap",
+                        children: props.categories.map((category)=>{
+                            return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                className: "mr-2 mb-2 flex items-center rounded-full bg-gray-200 px-4 py-1",
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+                                        src: pizza,
+                                        width: 20,
+                                        height: 20
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                        className: "ml-2",
+                                        children: category.name
+                                    })
+                                ]
+                            });
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+};
+/* harmony default export */ const components_ProductCard = (ProductCard);
+
 // EXTERNAL MODULE: ./pages/api/clientRequest.ts
 var clientRequest = __webpack_require__(546);
 ;// CONCATENATED MODULE: ./pages/home/index.tsx
@@ -154,19 +247,16 @@ var clientRequest = __webpack_require__(546);
 
 
 
-const Home = ()=>{
+const Home = ({ data  })=>{
     const { 0: categories , 1: setCategories  } = (0,external_react_.useState)([]);
     const basePath = "/assets/images/categories/";
     const { 0: selectedCategories , 1: setSelectedCategories  } = (0,external_react_.useState)([]);
     const { 0: products , 1: setProducts  } = (0,external_react_.useState)(products_namespaceObject);
     (0,external_react_.useEffect)(()=>{
-        getCategory();
-        console.log();
-    }, []);
-    const getCategory = async ()=>{
-        const { data  } = await (0,clientRequest/* post */.v)("category", null);
-        if (data.length) setCategories(data);
-    };
+        setSelectedCategories(data);
+    }, [
+        data
+    ]);
     const handleCategoryClick = (category)=>{
         const newSelectedCategories = selectedCategories.includes(category) ? selectedCategories.filter((c)=>c !== category
         ) : [
@@ -227,7 +317,7 @@ const Home = ()=>{
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
                         className: "flex flex-wrap",
                         children: products.map((product)=>{
-                            return /*#__PURE__*/ jsx_runtime_.jsx(ProductCard["default"], {
+                            return /*#__PURE__*/ jsx_runtime_.jsx(components_ProductCard, {
                                 ...product
                             });
                         })
@@ -236,6 +326,14 @@ const Home = ()=>{
             })
         ]
     });
+};
+Home.getInitialProps = async ()=>{
+    const { data  } = await (0,clientRequest/* post */.v)("category", null);
+    return {
+        props: {
+            data
+        }
+    };
 };
 /* harmony default export */ const home = (Home);
 
@@ -305,7 +403,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [675,980,868], () => (__webpack_exec__(53)));
+var __webpack_exports__ = __webpack_require__.X(0, [675,980], () => (__webpack_exec__(422)));
 module.exports = __webpack_exports__;
 
 })();

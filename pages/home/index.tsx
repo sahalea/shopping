@@ -4,30 +4,23 @@ import { useState, useEffect } from 'react'
 import HomeBanner1 from '../../assets/images/home-banner-1.png'
 import HomeBanner2 from '../../assets/images/home-banner-2.png'
 import Layout from '../../components/Layout'
-import categoriesList from '../../data/categories.json'
 import Products from '../../data/products.json'
-import ProductCard from './components/ProductCard'
+import ProductCard from '../../components/ProductCard'
 import { post } from '../api/clientRequest'
 
-const Home: NextPage = () => {
+interface StatelessPage<P = {}> extends React.SFC<P> {
+  getInitialProps?: (ctx: any) => Promise<P>
+}
+
+const Home: StatelessPage<any> = ({ data }) => {
   const [categories, setCategories] = useState([])
   const basePath = '/assets/images/categories/'
   const [selectedCategories, setSelectedCategories] = useState<any>([])
   const [products, setProducts] = useState<any>(Products)
 
-
-
   useEffect(() => {
-    getCategory()
-    console.log();
-
-  }, [])
-
-  const getCategory = async () => {
-    const { data } = await post('category', null);
-    if (data.length) setCategories(data)
-  }
-
+    setSelectedCategories(data)
+  }, [data])
 
   const handleCategoryClick = (category: any) => {
     const newSelectedCategories = selectedCategories.includes(category)
@@ -35,7 +28,6 @@ const Home: NextPage = () => {
       : [...selectedCategories, category]
     setSelectedCategories(newSelectedCategories)
   }
-
 
   return (
     <Layout>
@@ -55,13 +47,18 @@ const Home: NextPage = () => {
           return (
             <div
               onClick={() => handleCategoryClick(category.name)}
-              className={`mr-2 mb-2 h-[70px] w-[70px] cursor-pointer rounded-xl border py-4 text-center hover:border-primary hover:bg-primary-light md:h-[80px] md:w-[150px] ${selectedCategories.includes(category.name)
-                ? ' border-2 border-primary bg-primary-light'
-                : ''
-                }`}
+              className={`mr-2 mb-2 h-[70px] w-[70px] cursor-pointer rounded-xl border py-4 text-center hover:border-primary hover:bg-primary-light md:h-[80px] md:w-[150px] ${
+                selectedCategories.includes(category.name)
+                  ? ' border-2 border-primary bg-primary-light'
+                  : ''
+              }`}
             >
               <div>
-                <Image src={`/categories/${category.name}.png`} width={20} height={20} />
+                <Image
+                  src={`/categories/${category.name}.png`}
+                  width={20}
+                  height={20}
+                />
               </div>
               <h1 className="mb-0">{category.name}</h1>
             </div>
@@ -82,5 +79,12 @@ const Home: NextPage = () => {
   )
 }
 
-
+Home.getInitialProps = async () => {
+  const { data } = await post('category', null)
+  return {
+    props: {
+      data,
+    },
+  }
+}
 export default Home
